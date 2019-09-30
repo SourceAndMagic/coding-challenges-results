@@ -44,7 +44,7 @@ public class InquiryService {
 		}
 	}
 
-	private void invokePushNotificationHandler(Inquiry inquiry) {
+	private void invokePushNotificationHandler(final Inquiry inquiry) {
 		final Object pushNotifHandler = appContext.getBean(PUSH_NOTIFICATION_HANDLER);
 		try {
 			final Method method = pushNotifHandler.getClass().getMethod("sendNotification", Inquiry.class);
